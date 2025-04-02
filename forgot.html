@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - ECourses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+            background-image: url('img/carousel-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .forgot-password-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .forgot-password-container:hover {
+            transform: scale(1.02);
+        }
+
+        .forgot-password-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #f77f00;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .forgot-password-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .forgot-password-container label {
+            font-weight: 500;
+        }
+
+        .forgot-password-container input {
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .forgot-password-container input:focus {
+            border-color: #f77f00;
+            outline: none;
+            box-shadow: 0 0 8px rgba(247, 127, 0, 0.5);
+        }
+
+        .forgot-password-container button {
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: #f77f00;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 420px;
+        }
+
+        .forgot-password-container button:hover {
+            background: #ff7700;
+        }
+
+        .forgot-password-container button:active {
+            background: #cc6600;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .form-footer a {
+            color: #f77f00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .forgot-password-container {
+                max-width: 90%;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <h2>Reset Your Password</h2>
+        <form id="forgot-password-form" action="submit_forgot_password.php" method="post">
+            <label for="email">Enter Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="cpassword" name="password" placeholder="Confirm Password" required>
+        </form><br>
+       <a href="login.html"><button type="submit">Reset</button></a>
+        <div class="form-footer">
+            <p>Remember your password? <a href="login.html">Login here</a></p>
+        </div>
+</div>
+<script>
+document.querySelector('button').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('cpassword').value;
+    if (password !== confirmPassword) {
+        alert('Passwords do not match. Please enter the same password.');
+        return; 
+    }
+    alert('Your password has been reset successfully!');
+    window.location.href = 'login.html'; 
+});
+
+
+</script>
+</body>
+</html>
