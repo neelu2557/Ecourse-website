@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ECourses</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+            background-image: url('img/carousel-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .signup-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .signup-container:hover {
+            transform: scale(1.02);
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #f77f00;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .signup-container label {
+            font-weight: 500;
+        }
+
+        .signup-container input {
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .signup-container input:focus {
+            border-color: #f77f00;
+            outline: none;
+            box-shadow: 0 0 8px rgba(247, 127, 0, 0.5);
+        }
+        .signup-container .password-strength {
+            font-size: 0.9rem;
+            color: #f77f00;
+            display: none;
+        }
+
+        .signup-container button {
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: #f77f00;
+            color: #fff;
+            width: 422px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .signup-container button:hover {
+            background: #ff7700;
+        }
+
+        .signup-container button:active {
+            background: #cc6600;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .form-footer a {
+            color: #f77f00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .signup-container {
+                max-width: 90%;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+           
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <p class="password-strength" id="password-strength"></p>
+         </form><br>
+           <a href="login.html"> <button type="submit">Sign Up</button></a>
+        <div class="form-footer">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+   <script>
+    document.querySelector('button').addEventListener('click', function (event) {
+    event.preventDefault();
+    alert('Sign Up Successful!');
+});
+
+   </script>
+</body>
+</html>
