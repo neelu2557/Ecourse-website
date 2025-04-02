@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Courses</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .btn, .btn-secondary {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f77f00;
+      color: white;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover, .btn-secondary:hover {
+      background-color: #e66c00;
+    }
+    .hero {
+      position: relative;
+      height: 60vh;
+      background: url('img/about.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .courses {
+      padding: 40px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .course-carousel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .course-item {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-content img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-content {
+      padding: 20px;
+    }
+
+    .course-content h3 {
+      font-size: 1.5rem;
+      color: #f77f00;
+      margin-bottom: 10px;
+    }
+
+    .course-content p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .btn-secondary {
+      text-align: center;
+      width: 200px;
+    }
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .course-item {
+        width: 90%;
+      }
+    }
+    .footer {
+            background: #222;
+            color: #fff;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+        .footer .column {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer .column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .footer .column h3::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 50%;
+            background: #f77f00;
+            margin-top: 5px;
+        }
+        .footer p, .footer a {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .footer .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        .footer .social-icons a:hover {
+            background: #f77f00;
+        }
+        .footer .social-icons a img {
+            width: 20px;
+            height: 20px;
+        }
+        .footer-bottom {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .footer-bottom p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .footer-bottom a {
+            color: #f77f00;
+            font-weight: bold;
+        }
+
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Learn with the Best</h1>
+      <p>Discover cutting-edge courses crafted for your career growth.</p>
+      <a href="#courses" class="btn">View Courses</a>
+    </div>
+  </header>
+  <section id="courses" class="courses">
+    <h2 class="section-title">Our Courses</h2>
+    <div class="course-carousel">
+      <div class="course-item">
+        <div class="course-content">
+          <img src="img/img1.avif" alt="Web Development">
+          <h3>Web Development</h3>
+          <p>Master the art of building responsive websites with HTML, CSS, JavaScript, and modern frameworks.</p>
+          <a href="web.html" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="course-item">
+        <div class="course-content">
+          <img src="img/img4.jpg" alt="Data Science">
+          <h3>Data Science</h3>
+          <p>Analyze complex data, derive insights, and predict outcomes using Python and advanced tools.</p>
+          <a href="data-science.html" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="course-item">
+        <div class="course-content">
+          <img src="img/img2.jpeg" alt="AI/ML">
+          <h3>AI & ML</h3>
+          <p>Build intelligent systems using artificial intelligence and machine learning techniques.</p>
+          <a href="Ai.html" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br><br>
+  <footer class="footer">
+    <div class="column">
+        <h3>About ECourses</h3>
+        <p>We are a leading online education platform offering courses in web development, data science, AI, and more.</p>
+        <p>Join us to achieve your learning goals with the best instructors in the industry.</p>
+    </div>
+    <div class="column">
+        <h3>Contact Info</h3>
+        <p>Email: support@ecourses.com</p>
+        <p>Phone: +1 800 123 456</p>
+        <p>Address: 123 Learning St., Knowledge City, World</p>
+    </div>
+    <div class="column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/twiiter.png" alt="Twitter"></a>
+            <a href="#"><img src="img/linkdin.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="img/insta.jpeg" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <p>&copy; 2024 ECourses. All Rights Reserved.</p>
+</div>
+</body>
+</html>
